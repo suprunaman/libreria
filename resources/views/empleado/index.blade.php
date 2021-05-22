@@ -1,3 +1,11 @@
+<a href="{{ url('empleado/create') }} ">Crear nuevo empleado</a>
+<br>
+<br>
+
+@if(Session::has('mensaje'))
+    {{Session::get('mensaje')}}
+@endif
+
 <table class="table table-light">
     <thead class="thead-light">
         <tr>

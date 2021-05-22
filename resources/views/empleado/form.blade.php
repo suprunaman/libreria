@@ -1,3 +1,10 @@
+<a href="{{ url('empleado/') }} ">Listado de empleados</a>
+<br>
+<br>
+<h1>{{$modo}}</h1>
+<br>
+
+
 <label for="Nombre">Nombre</label>
 <input type="text" name="Nombre" name="Nombre" id="Nombre" value="{{ isset($empleado->Nombre)?$empleado->Nombre:'' }}">
 <br>
@@ -15,9 +22,10 @@
 <br>
 
 <label for="Foto">Foto</label>
+<br>
 <img src="{{ isset($empleado->Foto)?asset('storage').'/'.$empleado -> Foto:'' }}" width="100" alt="">
-{{ isset($empleado->Foto)?$empleado->Foto:'' }}
+<br>
 <input type="file" name="Foto" name="Foto" id="Foto" value="{{ isset($empleado->Foto)?$empleado->Foto:'' }}" >
 <br>
-
-<input type="submit" name="Enviar"  value="Enviar datos">
+<br>
+<input type="submit" name="Enviar"  value="{{ $modo }} empleado">

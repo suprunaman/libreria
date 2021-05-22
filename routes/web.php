@@ -41,3 +41,7 @@ Route::get('/empleado/form', function () {
     return view('empleado.form');
 });
 */
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
